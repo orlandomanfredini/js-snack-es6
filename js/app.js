@@ -118,30 +118,26 @@ const IdSup120 = [];
 elencoStudenti.map((element, i, array)=>{
     let nomeStudente = element.nome;
 
-    let mediaStudente = element.media;
-
-    let idStudente = element.id;
-
     let nomeBadge = nomeStudente.toUpperCase()
     console.log(nomeBadge)
 
     arrayNomiBadge.push(nomeBadge)
     
-    if(mediaStudente > 70){
-        arrayVotiMaggiore70.push(element)
-    }else if (mediaStudente > 70 && idStudente > 120){
-        IdSup120.push(element)
-    }
-
-    
-
 })
 
 console.log(arrayNomiBadge);
 
-console.log(arrayVotiMaggiore70);
+elencoStudenti.forEach((element, i, array)=>{
+    if(element.media > 70){
+        arrayVotiMaggiore70.push(element)
+    }else if(element.media > 70 && element.id > 120){
+        IdSup120.push(element)
+    }
+})
 
-console.log(IdSup120);
+console.log(arrayVotiMaggiore70, IdSup120);
+
+
 
 
 
