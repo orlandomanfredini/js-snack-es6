@@ -188,7 +188,68 @@ console.log(mammiferi);
 
 
 
+// Crea un array di oggetti che rappresentano delle persone.
+// Ogni persona ha un nome, un cognome e un’età.
 
+// Crea quindi un nuovo array inserendo, per ogni persona, una frase con il
+// nome e cognome e l’indicazione se può guidare, in base all’età.
+
+
+
+const persone = [
+    {
+        nome : 'Orlando',
+        cognome : 'Manfredini',
+        eta : 25,
+    },
+    {
+        nome : 'Nicola',
+        cognome : 'Manfredini',
+        eta : 60,
+    },
+    {
+        nome : 'Taddeo',
+        cognome : 'Manfredini',
+        eta : 16,
+    },
+    {
+        nome : 'Ruggero',
+        cognome : 'Manfredini',
+        eta : 35,
+    },
+    {
+        nome : 'Chiara',
+        cognome : 'Manfredini',
+        eta : 13,
+    },
+    {
+        nome : 'Giacomo',
+        cognome : 'Manfredini',
+        eta : 27,
+    },
+    {
+        nome : 'Gianni',
+        cognome : 'Manfredini',
+        eta : 12,
+    },
+    {
+        nome : 'Laura',
+        cognome : 'Manfredini',
+        eta : 56,
+    }
+
+]
+
+
+let nomeConsenso = [];
+
+persone.filter((element, i, array)=>{
+    if(element.eta > 18){
+        console.log (element.nome + ' Puo guidare')
+    }else{
+        console.log (element.nome + ' Non puo guidare')
+    }
+})
 
 
 
