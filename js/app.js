@@ -138,6 +138,55 @@ elencoStudenti.forEach((element, i, array)=>{
 console.log(arrayVotiMaggiore70, IdSup120);
 
 
+// Crea un array di oggetti che rappresentano degli animali.
+// Ogni animale ha un nome, una famiglia e una classe.
+// Es:
+
+// Crea un nuovo array con la lista dei mammiferi.
+// [
+// { nome: ‘leone’, famiglia: ‘felidi’, classe: ‘mammiferi’ },
+// { nome: ‘cane’, famiglia: ‘canidi’, classe: ‘mammiferi’ },
+// { nome: ‘gallina’, famiglia: ‘fasianidi’, classe: ‘uccelli’ },
+
+const animali =[
+    {
+        nome : 'Leone',
+        famiglia : 'Felini',
+        classe : 'mammiferi'
+    },
+    { nome: 'cane',
+      famiglia: 'canidi', 
+      classe: 'mammiferi' 
+    },
+    {
+        nome: 'gallina', 
+        famiglia: 'fasianidi', 
+        classe: 'uccelli' 
+    },
+    {
+        nome : 'Balena',
+        famiglia : 'cefalopodi',
+        classe : 'mammiferi' 
+    },
+    {
+        nome : 'coccodrillo',
+        famiglia : 'rettili',
+        classe : 'animali sangue freddo'    
+    }
+
+]
+
+const mammiferi = [];
+
+animali.filter((element, i, array)=>{
+    if(element.classe === 'mammiferi'){
+        mammiferi.push(element)
+    }
+})
+
+console.log(mammiferi);
+
+
 
 
 
