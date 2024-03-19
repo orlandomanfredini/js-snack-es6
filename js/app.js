@@ -243,7 +243,7 @@ const persone = [
 
 let nomeConsenso = [];
 
-persone.filter((element, i, array)=>{
+persone.map((element, i, array)=>{
     if(element.eta > 18){
         console.log (element.nome + ' Puo guidare')
     }else{
