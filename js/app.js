@@ -128,10 +128,10 @@ elencoStudenti.map((element, i, array)=>{
 console.log(arrayNomiBadge);
 
 elencoStudenti.forEach((element, i, array)=>{
-    if(element.media > 70){
-        arrayVotiMaggiore70.push(element)
-    }else if(element.media > 70 && element.id > 120){
-        IdSup120.push(element)
+    if(element.media > 70 && element.id > 120){
+        IdSup120.push(element);
+    }else if(element.media > 70){
+        arrayVotiMaggiore70.push(element);
     }
 })
 
