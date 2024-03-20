@@ -280,6 +280,10 @@ const biciclette = [
         peso : 56,
     },
     {
+        nome : 'Trek',
+        peso : 52,
+    },
+    {
         nome : 'Specialized',
         peso : 58,
     },
@@ -297,16 +301,16 @@ const pesoBiciclette = biciclette.map((element)=>{
     return peso
 })
 
-console.log(pesoBiciclette);
+
 
 let numeroPiccolo = numeroPiuBasso(pesoBiciclette);
-console.log(numeroPiccolo);
+
 
 for(let key in biciclette){
     let elementCorrente = biciclette[key];
     let pesoCorrente = elementCorrente.peso;
     let nomeCorrente = elementCorrente.nome;
-    console.log(pesoCorrente, elementCorrente);
+    
 
     if(pesoCorrente === numeroPiccolo){
         console.log('La ' + nomeCorrente + ' pesa ' + pesoCorrente + ' kg')
@@ -324,7 +328,7 @@ function numeroPiuBasso(array){
     for (let i = 0; i < array.length; i++){
         
         let element = array[i];
-        console.log(element);
+        
 
         if(pesoStart > element){
             pesoStart = element;
@@ -335,6 +339,85 @@ return pesoStart
 }
 
 
+
+
+// SNACK 4
+// Creare un array di oggetti di squadre di calcio.
+// Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+// Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+// Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti.
+// Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi
+//  e falli subiti e stampiamo tutto in console.
+
+const campionato = [
+    {
+        nome : 'Milan',
+        falliSubiti : 0,
+        punti : 0,
+    },
+    {
+        nome : 'Juventus',
+        falliSubiti : 0,
+        punti : 0,
+    },
+    {
+        nome : 'Inter',
+        falliSubiti : 0,
+        punti : 0,
+    },
+    {
+        nome : 'Fiorentina',
+        falliSubiti : 0,
+        punti : 0,
+    },
+    {
+        nome : 'Lecce',
+        falliSubiti : 0,
+        punti : 0,
+    },
+    {
+        nome : 'Bologna',
+        falliSubiti : 0,
+        punti : 0,
+    }
+]
+
+const nuovoCampionato = campionato.map((element, i, array)=>{
+    let punti = element.punti;
+    let falli = element.falliSubiti;
+
+    punti = puntiRandom(0,114);
+    falli = falliRandom(0,400);
+
+    return {
+        nome : element.nome,
+        punti : punti,
+        falli : falli,
+    }
+
+})
+
+console.log(nuovoCampionato);
+
+
+
+
+
+
+
+
+
+
+
+
+// UTILITY SNACK
+function puntiRandom(min, max){
+    return parseInt(Math.random() * (max - min) + min);
+}
+
+function falliRandom(min, max){
+    return parseInt(Math.random() * (max - min) + min);
+}
 
 
 
