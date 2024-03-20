@@ -257,4 +257,87 @@ console.log(nomeConsenso)
 
 
 
+// SNACK 3
+// Creare un array di oggetti:
+// Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
+// Stampare in console la bici con peso minore utilizzando destructuring e template literal
+
+const biciclette = [
+    {
+        nome : 'Specialized',
+        peso : 59,
+    },
+    {
+        nome : 'Trek',
+        peso : 62,
+    },
+    {
+        nome : 'Scott',
+        peso : 54,
+    },
+    {
+        nome : 'MTB',
+        peso : 56,
+    },
+    {
+        nome : 'Specialized',
+        peso : 58,
+    },
+    {
+        nome : 'Bianchi',
+        peso : 53,
+    }
+
+];
+
+
+const pesoBiciclette = biciclette.map((element)=>{
+    let peso = element.peso
+
+    return peso
+})
+
+console.log(pesoBiciclette);
+
+let numeroPiccolo = numeroPiuBasso(pesoBiciclette);
+console.log(numeroPiccolo);
+
+for(let key in biciclette){
+    let elementCorrente = biciclette[key];
+    let pesoCorrente = elementCorrente.peso;
+    let nomeCorrente = elementCorrente.nome;
+    console.log(pesoCorrente, elementCorrente);
+
+    if(pesoCorrente === numeroPiccolo){
+        console.log('La ' + nomeCorrente + ' pesa ' + pesoCorrente + ' kg')
+    }
+}
+
+
+
+
+// UTILITY SNACK
+function numeroPiuBasso(array){
+
+    let pesoStart = array[0];
+    
+    for (let i = 0; i < array.length; i++){
+        
+        let element = array[i];
+        console.log(element);
+
+        if(pesoStart > element){
+            pesoStart = element;
+            
+        }
+    }
+return pesoStart
+}
+
+
+
+
+
+
+
 
