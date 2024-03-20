@@ -308,12 +308,11 @@ let numeroPiccolo = numeroPiuBasso(pesoBiciclette);
 
 for(let key in biciclette){
     let elementCorrente = biciclette[key];
-    let pesoCorrente = elementCorrente.peso;
-    let nomeCorrente = elementCorrente.nome;
+    const {nome,peso} = elementCorrente
     
 
-    if(pesoCorrente === numeroPiccolo){
-        console.log('La ' + nomeCorrente + ' pesa ' + pesoCorrente + ' kg')
+    if(peso === numeroPiccolo){
+        console.log('La ' + nome + ' è la bici che pesa meno di tutte con il peso di ' + peso + ' kg')
     }
 }
 
