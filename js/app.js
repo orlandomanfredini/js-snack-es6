@@ -121,7 +121,7 @@ elencoStudenti.map((element, i, array)=>{
     let nomeBadge = nomeStudente.toUpperCase()
     console.log(nomeBadge)
 
-    arrayNomiBadge.push(nomeBadge)
+    arrayNomiBadge.push(nomeBadge,element.id, element.media)
     
 })
 
@@ -245,11 +245,14 @@ let nomeConsenso = [];
 
 persone.map((element, i, array)=>{
     if(element.eta > 18){
-        console.log (element.nome + ' Puo guidare')
+        nomeConsenso.push(element.nome + ' puo guidare')
+
     }else{
-        console.log (element.nome + ' Non puo guidare')
+        nomeConsenso.push(element.nome + ' Non puo guidare')
     }
 })
+
+console.log(nomeConsenso)
 
 
 
